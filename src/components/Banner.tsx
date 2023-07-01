@@ -9,14 +9,19 @@ import s1990 from "../assets/imgs/1990s.jpg";
 import s2000 from "../assets/imgs/2000s.jpg";
 import s2010 from "../assets/imgs/2010s.jpg";
 import s2020 from "../assets/imgs/2020s.jpg";
-import Card from "./Card";
 
 import Y1920 from "./titles/Y1920";
+import Y1930 from "./titles/Y1930";
 
 const bannerImgs = [
   {
     title: <Y1920 />,
     banner: s1920,
+    backgroundColor: "#1a0a0a",
+  },
+  {
+    title: <Y1930 />,
+    banner: s1930,
     backgroundColor: "#1a0a0a",
   },
 ];
@@ -26,13 +31,12 @@ const Banner = () => {
     <div className="flex justify-center w-full">
       <div className="relative">
         <img
-          src={bannerImgs[0].banner}
+          src={bannerImgs[1].banner}
           className="h-[400px] object-cover pointer-events-none select-none"
           alt="twenties"
         />
-        {bannerImgs[0].title}
+        {bannerImgs[1].title}
       </div>
-      {/* <div className="shadow"> </div> */}
     </div>
   );
 };
