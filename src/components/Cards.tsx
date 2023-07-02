@@ -3,7 +3,7 @@ import movieData from "../assets/data.json";
 
 const Cards = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-5 flex-wrap my-0 px-5">
+    <div className="relative flex flex-col md:flex-row gap-5 flex-wrap mt-5 px-5 z-20">
       {movieData.results.map((movie) => {
         return (
           <Card

@@ -3,19 +3,25 @@
 @tailwind components;
 @tailwind utilities;
 
+img,
+a {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 .shadow {
   position: absolute;
   width: 100%;
   height: 100%;
-  box-shadow: 0 10px 10px -10px rgb(255, 255, 255) inset;
   top: 0;
   left: 0;
 }
@@ -25,4 +31,13 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   overflow: hidden;
+}
+
+.hidden-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.hidden-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

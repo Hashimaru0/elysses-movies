@@ -9,6 +9,12 @@ const Banner = ({ decade }: { decade: Decade }) => {
           className="h-[400px] object-cover pointer-events-none select-none"
           alt="twenties"
         />
+        <div
+          style={{
+            boxShadow: `inset 0 -100px 30px -60px ${decade.backgroundColor}`,
+          }}
+          className="shadow"
+        ></div>
         {decade.titleSVG}
       </div>
     </div>
