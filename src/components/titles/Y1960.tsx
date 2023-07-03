@@ -1,7 +1,7 @@
 const Y1960 = () => {
   return (
     <svg
-      className="absolute top-5 left-5 drop-shadow"
+      className="absolute top-7 left-7 drop-shadow"
       width="122"
       height="23"
       viewBox="0 0 122 23"

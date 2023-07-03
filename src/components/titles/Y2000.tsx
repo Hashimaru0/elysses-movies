@@ -1,9 +1,9 @@
 const Y2000 = () => {
   return (
     <svg
-      className="absolute top-5 left-5 drop-shadow"
-      width="159"
-      height="19"
+      className="absolute top-7 left-5 drop-shadow"
+      width="170"
+      height="25"
       viewBox="0 0 159 19"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

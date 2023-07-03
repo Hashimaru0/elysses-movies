@@ -26,7 +26,7 @@ import Y2020 from "./components/titles/Y2020";
 
 // Types
 import { Decade } from "./types/types";
-import Page from "./components/Page";
+import NavBanner from "./components/NavBanner";
 
 const decades: Decade[] = [
   {
@@ -98,17 +98,11 @@ const decades: Decade[] = [
 ];
 
 function App() {
-  const [pageIndex, setPageIndex] = useState(0);
+  const [pageIndex, setPageIndex] = useState(5);
 
   return (
-    <div
-      style={{ backgroundColor: decades[pageIndex].backgroundColor }}
-      className={`flex justify-center pb-10 select-none`}
-    >
-      {/* {decades.map((decade) => (
-        <Page key={decade.id} decade={decade} />
-      ))} */}
-      <Page key={decades[pageIndex].id} decade={decades[pageIndex]} />
+    <div className="bg-red-400">
+      <NavBanner decades={decades} />
     </div>
   );
 }
