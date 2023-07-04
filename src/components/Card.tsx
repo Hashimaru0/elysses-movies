@@ -15,7 +15,7 @@ const Card = ({
 }) => {
   return (
     <a
-      className="flex text-white md:w-[45%] h-[180px] gap-2 tracking-wide"
+      className="flex text-white md:w-[45%] h-[180px] gap-2 tracking-wide bg-blue-600"
       href={`https://www.themoviedb.org/movie/${id}`}
       target="_blank"
     >

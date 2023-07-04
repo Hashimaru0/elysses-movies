@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import Cards from "./components/Cards";
+import NavBanner from "./components/NavBanner";
 
 import s1920 from "./assets/imgs/1920s.jpg";
 import s1930 from "./assets/imgs/1930s.jpg";
@@ -26,7 +28,6 @@ import Y2020 from "./components/titles/Y2020";
 
 // Types
 import { Decade } from "./types/types";
-import NavBanner from "./components/NavBanner";
 
 const decades: Decade[] = [
   {
@@ -98,11 +99,19 @@ const decades: Decade[] = [
 ];
 
 function App() {
-  const [pageIndex, setPageIndex] = useState(5);
+  const [pageIndex, setPageIndex] = useState(6);
+
+  useEffect(() => {
+    //console.log(pageIndex);
+  }, [pageIndex]);
 
   return (
-    <div className="bg-red-400">
-      <NavBanner decades={decades} />
+    <div
+      style={{ backgroundColor: decades[pageIndex].backgroundColor }}
+      className="transition"
+    >
+      <NavBanner decades={decades} setPageIndex={setPageIndex} />
+      <Cards />
     </div>
   );
 }
