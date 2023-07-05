@@ -1,11 +1,12 @@
 import Card from "./Card";
-import movieData from "../assets/data.json";
+// Types
+import { Movie } from "../types/types";
 
-const Cards = () => {
+const Cards = ({ data }: { data: Movie[] }) => {
   return (
     <>
-      <div className="relative flex flex-col md:flex-row gap-5 flex-wrap mt-5 px-5 z-20 bg-red-400">
-        {movieData.results.map((movie) => {
+      <div className="relative flex justify-center flex-col md:flex-row max-w-[768px] gap-5 flex-wrap px-5 mt-[1rem] mx-auto z-10">
+        {data.map((movie) => {
           return (
             <Card
               key={movie.id}

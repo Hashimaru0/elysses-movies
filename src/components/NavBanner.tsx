@@ -3,12 +3,12 @@ import { Decade } from "../types/types";
 
 const BannerPage = ({ decade }: { decade: Decade }) => {
   return (
-    <div className="max-w-[768px] w-screen shrink-0">
+    <div className="max-w-[768px] w-full shrink-0">
       <div className="flex justify-center">
         <div className="relative">
           <img
             src={decade.banner}
-            className="h-[400px] object-cover"
+            className="h-[400px] object-cover fade-image-linear"
             alt="twenties"
             loading="lazy"
           />
@@ -71,7 +71,7 @@ const NavBanner = ({
   };
 
   const handleDragEnd = (e: { preventDefault: () => void }) => {
-    if (!bannerRef.current) return;
+    if (!isMouseDown || !bannerRef.current) return;
     e.preventDefault();
 
     const banner = bannerRef.current;
